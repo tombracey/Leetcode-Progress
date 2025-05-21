@@ -12,9 +12,17 @@ def append_to_json(count):
     today = datetime.today().strftime('%Y-%m-%d')
     entry = {"date": today, "total_solved": count}
 
-    with open("progress_tracking/progress.json", "w") as f:
-        data = json.load(f)
+    path = "progress_tracking/progress.json"
+
+    with open(path, "r") as f:
+        try:
+            data = json.load(f)
+        except:
+            data = []
         data.append(entry)
+
+    with open(path, "w") as f:
+        json.dump(data, f, indent=4)
 
 if __name__ == "__main__":
     count = count_problems()
