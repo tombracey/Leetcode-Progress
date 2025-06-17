@@ -1,6 +1,6 @@
 ## LeetCode Progress
 Auto-updates on push:
 
-![Progress Graph](progress_tracking/progress.png)
+![Progress Graph](progress_tracking/progress.png?v=1750197100)
 
-I'm starting with the [SQL 50 Study Plan](https://leetcode.com/studyplan/top-sql-50/).
+I'm starting with the [SQL 50 Study Plan](https://leetcode.com/studyplan/top-sql-50/)
