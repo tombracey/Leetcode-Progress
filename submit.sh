@@ -1,8 +1,16 @@
 #!/bin/bash
+set -e
+
+
+# Activate venv
+export PYTHONPATH=$(pwd)
+source venv/bin/activate
+
 
 # Count the problems solved and create a new graph
 python progress_tracking/progress_tracker.py
 python progress_tracking/plot.py
+
 
 # Overwrites README to ensures the progress image updates - had issues with it caching
 timestamp=$(date +%s)
@@ -14,6 +22,7 @@ Auto-updates on push:
 
 I'm starting with the [SQL 50 Study Plan](https://leetcode.com/studyplan/top-sql-50/)
 EOF
+
 
 # Push to GitHub
 git add .
